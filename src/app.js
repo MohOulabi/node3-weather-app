@@ -8,6 +8,7 @@ const viewsPath = path.join(__dirname, '../', 'views');
 const layoutPath = path.join(__dirname, '../', 'views/layout');
 const partialsPath = path.join(__dirname, '../', 'views/partials');
 
+const port = process.env.PORT || 8080;
 
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
@@ -37,6 +38,6 @@ require('../routes/routes')(app);
 
 
 
-app.listen(8080, () => {
-    console.log('Server is up on port 8080.');
+app.listen(port, () => {
+    console.log('Server is up on port' + port);
 });

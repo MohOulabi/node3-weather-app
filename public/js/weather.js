@@ -6,7 +6,7 @@ form.addEventListener('submit', (e) => {
 
     if (address.trim()) {
         document.querySelector('#address').innerHTML = 'loading..'
-        fetch(`http://localhost:8080/api/weather?address=${address}`).
+        fetch(`/api/weather?address=${address}`).
             then((response) => {
                 response.json().then(({ error, address, location, forecast }) => {
                     if (error) {
