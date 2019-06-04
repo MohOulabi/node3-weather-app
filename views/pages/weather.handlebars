@@ -1,0 +1,24 @@
+{{#section 'head'}}
+<title>{{title}}</title>
+{{/section}}
+
+<h1>{{title}}</h1>
+
+
+<p id="address"></p>
+<p id="location"></p>
+<p id="forecast"></p>
+
+<form id="weather-form" method="GET" action="/api/weather">
+    <p class="error">
+
+    </p>
+    <input type="text" name="address" placeholder="Address">
+    <input type="submit" value="Search" />
+</form>
+
+
+
+{{#section 'scripts'}}
+<script type="text/javascript" src="/js/weather.js"></script>
+{{/section}}
