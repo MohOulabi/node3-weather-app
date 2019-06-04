@@ -5,7 +5,6 @@ form.addEventListener('submit', (e) => {
     const address = e.target.address.value;
 
     if (address.trim()) {
-
         document.querySelector('#address').innerHTML = 'loading..'
         fetch(`http://localhost:8080/api/weather?address=${address}`).
             then((response) => {
